@@ -1,0 +1,218 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@font-face {
+  font-family: 'InterBold';
+  src: url('../public/assets/fonts/inter/inter-bold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'InterRegular';
+  src: url('../public/assets/fonts/inter/Inter-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'PoppinsLight';
+  src: url('../public/assets/fonts/poppins/Poppins-Light.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'PoppinsMedium';
+  src: url('../public/assets/fonts/poppins/Poppins-Medium.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'PoppinsSemibold';
+  src: url('../public/assets/fonts/poppins/Poppins-SemiBold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'PoppinsRegular';
+  src: url('../public/assets/fonts/poppins/Poppins-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url('../public/assets/fonts/opansans/OpenSans-Regular.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'OpenSansSemibold';
+  src: url('../public/assets/fonts/opansans/OpenSans-Semibold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'OpenSansLight';
+  src: url('../public/assets/fonts/opansans/OpenSans-Light.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'MontserratRegular';
+  src: url('../public/assets/fonts/montserrat/Montserrat-Regular.ttf') format('truetype'),
+}
+@font-face {
+  font-family: 'MontserratSemibold';
+  src: url('../public/assets/fonts/montserrat/Montserrat-SemiBold.ttf') format('truetype'),
+}
+
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url('../public/assets/fonts/poppins/Poppins-Bold.ttf') format('truetype'),
+}
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+}
+
+.after-line .filter-yellow {
+  filter: sepia(150%) saturate(5787%) hue-rotate(353deg) brightness(98%) contrast(105%);
+}
+
+.active-filter img {
+  filter: sepia(150%) saturate(5787%) hue-rotate(353deg) brightness(98%) contrast(105%);
+}
+
+.after-line {
+  position: relative;
+}
+
+.after-line::after {
+  content: "";
+  position: absolute;
+  right: -30px;
+  width: 3px;
+  height: 40px;
+  background-color: #ffe000;
+  top: -10px;
+}
+
+.slick-dots {
+  bottom: 5px !important;
+}
+
+.case-slider .slick-dots li.slick-active button {
+  opacity: unset;
+  width: 59px;
+  height: 11px;
+  border-radius: 5.5px;
+  background-color: #1A2531;
+}
+
+.case-slider .slick-dots li button {
+  opacity: unset;
+  width: 15px;
+  height: 11px;
+  border-radius: 5.5px;
+  background-color: #1A2531;
+  transition: 0.6s all ease-in-out;
+}
+
+.slick-track {
+  width: 100%;
+}
+
+.slick-slider {
+  overflow: hidden !important;
+}
+
+.case-slider .slick-dots li button::before {
+  content: none;
+}
+
+.case-slider .slick-dots li {
+  width: unset;
+  height: unset;
+}
+
+.transition-all-ease {
+  transition: 0.6s all ease-in-out;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 529px) {
+  .after-line::after {
+    content: none;
+
+  }
+}
+
+@media only screen and (max-width: 1199px) {
+  .after-line::after {
+    content: none;
+  }
+}
+
+
+.trade-history-table table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.trade-history-table .p-column-header-content {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.trade-history-table th,
+.trade-history-table td {
+  padding: 9px;
+  text-align: left;
+}
+
+.trade-history-table th {
+  background-color: transparent;
+  font-family: 'PoppinsMedium';
+  color: #6F88A4;
+  font-size: 14px;
+}
+
+.trade-history-table td {
+  color: #CBD6E4;
+  font-size: 14px;
+  font-family: 'MontserratRegular';
+}
+
+.trade-history-table tr:has(td):nth-child(odd) {
+  background-color: #1D2B3C;
+}
+
+.trade-history-table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+tr:has(td:contains('Buy')) {
+  background-color: red;
+  color: red !important;
+}
+.trade-history-table tr:hover {
+  /* background-color: #1D2B3C; */
+}

@@ -1,0 +1,8 @@
+export const BASE_URL = "https://mm.blockbounce.xyz/v1"
+export const LOGIN_WALLET_URL = "/auth/login-wallet"
+export const SIGNUP_WALLET_URL = "/auth/register-wallet"
+export const GET_ALL_BOTS = "/bot/all"
+export const UPDATE_BOT_URL = "/bot"
+export const UPDATE_SETTING_URL = "/user/setting"
+export const BLOCKBOUNCE_WALLET = "EU9KxJvkwXGhWL95UbgaBK295k1yZoGzx2ZEtrpjx1BF"
+export const RPC_URL = "https://mainnet.helius-rpc.com/?api-key=544c825b-1207-499b-9aea-67f6cfe08f81"
